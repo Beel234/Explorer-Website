@@ -1,0 +1,363 @@
+/*Start*/
+/*Designing the global*/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-family:'Nunito', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    padding: 5rem 0;
+}
+
+
+
+/*Designing the header*/
+header{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container{
+    width: 100%;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(15, 15, 15, 0.459);
+}
+
+.nav-brand{
+    width: 2rem;
+}
+
+.menu-icons i{
+    font-size: 3.5rem;
+    color: #fafaff;
+    cursor:pointer;
+}
+
+.close i{
+    color: #ffffff;
+}
+
+.nav-list{
+    width: 25rem;
+    height: 100vh;
+    background-color: #f015c0ec;
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    transition: all 650ms ease-in-out;
+}
+.nav-list.active{
+    right: 0;
+}
+
+.close{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.nav-item{
+    margin: 1.5rem 0;
+}
+
+.nav-link{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: rgba(0,0,0,.7);
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(185, 14, 219, 0.63) 0%, rgba(126, 46, 112, 0.671) 
+    100%), url("images/header-bg.jpg") center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::before{
+    content: url();
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 4.7rem;
+    background: url("images/wave-small.png") center no-repeat;
+    background-size: cover;
+}
+
+.main-message{
+    width: 100%;
+    max-width: 50rem;
+    color: rgb(26, 25, 24);
+    text-transform: uppercase;
+    transform: translateY(20%);
+}
+
+.main-message h1{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.main-message p{
+    text-transform: initial;
+}
+
+.btn{
+    background-color:#000000; 
+    border-radius: 3rem;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+}
+
+.btn:hover{
+    background-color: #b92da2af;
+}
+
+/*experience the outdoors*/
+.experience-outdoors{
+    padding: 0;
+}
+
+.title-heading{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10rem;
+    color: rgba(14, 14, 14, 0.87);
+    }
+
+.title-heading h3{
+    font-size: 1.3rem;
+}
+
+.title-heading h1{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 2rem;
+    margin: .5rem 0 1rem;
+}
+
+.title-heading p{
+    text-transform: lowercase;
+}
+
+.activities-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.activities-grid-item{
+    height: 40rem;
+    padding: 5rem;
+    color: rgb(20, 20, 20);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.activities-grid-item::before{
+    content: url();
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(135deg,rgba(185, 14, 219, 0.63) 0%, rgba(126, 46, 112, 0.671) 
+    100%);
+    z-index: -1;
+}
+
+.star-gazing{
+    background: url("images/stars.jpg") center no-repeat;
+}
+
+.hiking{
+    background: url("images/hiking.jpg") center no-repeat;
+}
+.camping{
+    background: url("images/camping.jpg") center no-repeat;
+}
+.activities-grid-item i{
+    font-size: 4rem;
+    color: #ece6eb ;
+}
+
+.activities-grid-item h1{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+
+
+.adventure-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.adventure-grid-item p{
+    color: rgb(12, 12, 11);;
+}
+
+footer{
+    padding: 2.5rem 0;
+    background-color: rgba(236, 18, 225, 0.808);
+    text-align: center;
+    color: rgba(20, 20, 20, 0.877);
+}
+
+@media screen and (min-width: 350px){
+    .main-message{
+        transform: translateY(20%);
+    }
+}
+
+@media screen and (min-width: 470px){
+    .hero::before{
+        height: 9.4rem;
+        background: url("images/wave-medium.png");
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 700px){
+    header{
+        height: 8rem;
+    }
+    
+    .nav-brand{
+        width: 3.5rem;
+    }
+
+    .nav-list{
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        flex-direction: row;
+        transition: initial;
+    }
+
+    .menu-icons{
+        display: none;
+    }
+
+    .nav-item{
+        margin: 0 2.5rem;
+    }
+
+    .nav-link,
+    .current{
+        color: rgb(255, 255, 255);
+        position: relative;
+        font-size: 1.3rem;
+    }
+
+    .nav-link::before,
+    .current::before{
+        content: url();
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+        background-color: rgb(38, 39, 33);
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 650ms;
+    }
+
+    .current::before{
+        transform: scaleX(1);
+    }
+
+    .nav-link:hover::before{
+        transform: scaleX(1);
+    }
+
+    .hero{
+        height: 90vh;
+    }
+
+    .main-message{
+        transform: translateY(20%);
+    }
+
+    .title-heading h1{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 950px){
+    .hero::before{
+        height: 22.9rem;
+        background: url("images/wave-large.png");
+        background-size: cover;
+    }
+}
+
+
+@media screen and (min-width: 950px){
+    .hero{
+        height: 75vh;
+    }
+}
